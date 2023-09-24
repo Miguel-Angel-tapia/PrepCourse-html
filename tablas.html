@@ -1,0 +1,105 @@
+<pre>
+
+<table>: Define una tabla.
+
+<tr>: Define una fila en la tabla.
+
+<th>: Define una celda de encabezado de columna en la tabla.
+
+<td>: Define una celda de datos en la tabla.
+
+<caption>: Define un título o descripción para la tabla.
+
+<thead>: Agrupa el encabezado de la tabla.
+
+<tbody>: Agrupa el cuerpo principal de la tabla.
+  
+<tfoot>: Agrupa el pie de la tabla.
+
+<colgroup>: Agrupa un conjunto de columnas para aplicar estilos o atributos comunes.
+
+<col>: Define atributos para una o más columnas en una tabla.
+
+<th scope="row">: Especifica que una celda de encabezado de fila se aplica a toda la fila.
+
+<th scope="col">: Especifica que una celda de encabezado de columna se aplica a toda la columna.
+
+<th scope="rowgroup">: Define un grupo de celdas de encabezado de fila.
+
+<th scope="colgroup">: Define un grupo de celdas de encabezado de columna.
+
+<th abbr="">: Proporciona una abreviatura o descripción para una celda de encabezado.
+
+<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+
+Atributos de tabla :
+
+border: Establece el ancho del borde de la tabla. Puedes configurarlo para definir el grosor del borde de la tabla en píxeles.
+
+width: Define el ancho de la tabla en píxeles o porcentaje del ancho disponible en el contenedor.
+
+cellspacing: Establece el espacio entre las celdas de la tabla.
+
+cellpadding: Define el espacio interno en las celdas de la tabla.
+
+bgcolor: Establece el color de fondo de toda la tabla.
+
+align: Alinea la tabla en relación con el elemento que la contiene. Los valores pueden ser "left" (izquierda), "right" (derecha) o "center" (centro).
+
+valign: Alinea el contenido verticalmente dentro de las celdas de la tabla. Los valores pueden ser "top" (arriba), "middle" (centro) o "bottom" (abajo).
+
+colspan: Indica cuántas columnas debe ocupar una celda en una fila.
+
+rowspan: Indica cuántas filas debe ocupar una celda en una columna.
+
+scope: Define el alcance de una celda de encabezado, puede ser "row" (fila), "col" (columna), "rowgroup" (grupo de filas) o "colgroup" (grupo de columnas).
+
+headers: Asocia una celda de datos con una o más celdas de encabezado utilizando los valores de id de las celdas de encabezado.
+
+abbr: Proporciona una abreviatura o descripción de una celda de encabezado.
+
+colgroup: Asigna un grupo de columnas a un conjunto de atributos compartidos, como el ancho o la alineación.
+
+sorted: Indica el orden de clasificación de una columna en una tabla dinámica.
+
+summary: Proporciona un resumen de la estructura y el contenido de la tabla, útil para lectores de pantalla.
+
+Ejemplo de sintaxis tabla basica :
+
+<table>
+  <caption> esta es una tabla</caption>
+  <thead>
+    <th>encabezado 1</th>
+    <th>encabezado 2</th>
+    <th>encabezado 3</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dato 1</td>
+      <td>dato 2</td>
+      <td>dato 3</td>
+    </tr>
+     <tr>
+      <td>dato 4</td>
+      <td>dato 5</td>
+      <td>dato 6</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>pie de tabla 1</td>
+      <td>pie de tabla 2</td>
+      <td>pie de tabla 3</td>
+    </tr>
+  </tfoot>
+</table>
+
+Ejemplo de sintaxis atributos :
+
+<table border="1" cellpadding="4" cellspacing="4"
+  <!--  contenido de la tabla -->
+ </table>
+ El valor indicado en cada caso se aplica a los 4 lados por igual. Si quieres algo más específico tendrás que utilizar CSS.
+
+ 
+</pre>
