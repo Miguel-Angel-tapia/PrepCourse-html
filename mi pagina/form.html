@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <!--navegacion principal-->
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <b><a href="./index.html">Inicio</a></b>
+          </li>
+          <li>
+            <b><a href="./about.html">Acerca de</a></b>
+          </li>
+          <li>
+            <b><a href="./visits_activities.html">Visitas y Actividades</a></b>
+          </li>
+          <li>
+            <b><a href="./accommodation.html">Alojamientos</a></b>
+          </li>
+          <li>
+            <b><a href="./entertainment.html">Entretenimiento</a></b>
+          </li>
+          <li>
+            <b><a href="./form.html">Contáctanos</a></b>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form
+        action="mailto:tapiamiguelybr@gmail.com"
+        method="post"
+        enctype="application/x-www-form-urlencoded"
+      >
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          autocomplete="on"
+          required
+        /><br />
+        <label for="email">Correo electronico:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="on"
+          required
+        /><br />
+        <label for="textarea">Mensaje:</label>
+        <textarea
+          name="textarea"
+          id="textarea"
+          cols="30"
+          rows="10"
+          required
+        ></textarea
+        ><br />
+        <input type="submit" name="enviar" id="enviar" required />
+      </form>
+    </main>
+  </body>
+</html>
