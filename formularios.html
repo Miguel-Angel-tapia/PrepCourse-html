@@ -1,0 +1,296 @@
+<pre>
+El elemento <form> en HTML5 es un contenedor que se utiliza para crear formularios en una página web. Puedes incluir varios elementos y atributos dentro de un formulario para
+permitir a los usuarios ingresar datos y enviarlos al servidor para su procesamiento.
+
+
+ELEMENTOS comunes dentro de <form>:
+
+<input>: Se utiliza para crear campos de entrada de diferentes tipos. El atributo "type" define el tipo de campo que se desea. Por ejemplo, para un campo de texto, la sintaxis sería:
+<input type="text" name="nombre" value="Valor inicial">
+
+
+<textarea>: Permite a los usuarios ingresar texto de varias líneas. sintaxis: 
+<textarea name="comentarios" rows="4" cols="50">Texto inicial</textarea>
+cols: Indica la cantidad de caracteres que podrá tener el campo a lo ancho.
+rows: Indica la cantidad de líneas de texto que aceptará.
+
+
+<select>: Se usa para crear listas desplegables (menús de selección) con opciones. sintaxis:
+  <select name="opciones">
+  <option value="opcion1">Opción 1</option>
+  <option value="opcion2">Opción 2</option>
+</select>
+
+
+<button>: Puedes usarlo para agregar botones dentro del formulario, que pueden tener acciones personalizadas. sintaxis:
+<button type="submit">Enviar</button>
+
+
+<option>: se utiliza en combinación con el elemento <select> en HTML para crear listas desplegables (también conocidas como menús de selección) en formularios web. sintaxis:
+<select name="color">
+  <option value="rojo">Rojo</option>
+  <option value="verde">Verde</option>
+  <option value="azul">Azul</option>
+</select>
+
+
+<label>: Proporciona etiquetas descriptivas para los campos de entrada, mejorando la accesibilidad y la usabilidad. Se asocia a un campo mediante el atributo "for", sintaxis:
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" name="nombre">
+
+
+<fieldset> y <legend>: Se utilizan para agrupar elementos del formulario y proporcionar una descripción o título para ese grupo, sintaxis: 
+<fieldset>
+  <legend>Información Personal</legend>
+  <!-- Contenido del grupo de campos aquí -->
+</fieldset>
+
+
+<div> y otros elementos de diseño: Puedes utilizar elementos de diseño como <div> para organizar y dar formato a los campos del formulario. sintaxis 
+<div class="formulario">
+  <!-- Contenido del formulario aquí -->
+</div>
+
+ATRIBUTOS comunes del elemento <form>:
+
+<section> <!--selected-->
+selected: se utiliza en los elementos de formulario <option> dentro de un elemento <select> en HTML para marcar una opción como seleccionada por defecto en una lista desplegable, El atributo "selected" es útil cuando deseas proporcionar una opción preseleccionada en una lista desplegable, pero ten en cuenta que solo debe aplicarse a una de las opciones en la lista, sintaxis:
+<select name="nombre_del_campo">
+  <option value="valor1" selected>Opción 1</option>
+  <option value="valor2">Opción 2</option>
+  <!-- Más elementos option -->
+El atributo "selected" se agrega directamente al elemento <option> que deseas marcar como seleccionado por defecto
+</select>
+
+</section>
+
+<section> <!--checked-->
+checked: se utiliza en los elementos de formulario HTML, como casillas de verificación <input type="checkbox"> y botones de radio <input type="radio">, para marcar un elemento como seleccionado por defecto, sintaxis:
+<input type="checkbox" name="nombre_del_campo" value="valor" checked>
+El atributo "checked" se agrega directamente al elemento <input> y se utiliza para marcar el elemento como seleccionado por defecto. Cuando se carga una página web, el elemento con el atributo "checked" se mostrará como seleccionado
+
+</section>
+
+<section><!--VALUE-->
+value: se utiliza en varios elementos de formulario en HTML para definir el valor predeterminado o el valor inicial de un campo de entrada. sintaxis:
+<input type="text" name="nombre" value="Texto inicial">
+
+El atributo "value" se utiliza para establecer valores iniciales en los campos de formulario. Estos valores pueden ser modificados por el usuario antes de enviar el formulario. El valor predeterminado puede ser útil para proporcionar sugerencias o valores por defecto a los usuarios.
+
+</section>
+
+<section> <!--REQUIRED-->
+required: se agrega directamente al elemento de formulario que deseas marcar como obligatorio. Cuando se utiliza, el navegador web verifica automáticamente si el campo está vacío o si no se ha seleccionado una opción (por ejemplo, en caso de casillas de verificación o botones de radio) antes de permitir que el usuario envíe el formulario. Si el campo obligatorio no se completa, el navegador muestra un mensaje de error y no permite que el formulario se envíe. sintaxis:
+<input type="tipo_de_campo" name="nombre_del_campo" required="">
+
+</section>
+
+<section><!--METHOD-->
+method: Indica cómo se enviarán los datos del formulario al servidor. La elección del valor de "method" depende de la naturaleza de los datos que se están enviando y del propósito del formulario. En general, se utiliza "get" cuando se desean URLs legibles y compartibles, y se utiliza "post" cuando se envían datos confidenciales o cuando los datos son extensos y no deben mostrarse en la URL. Por defecto, si no se indica el Method, es GET, sintaxis:
+<form action="URL_del_script_de_procesamiento" method="método_de_envío">
+  <!-- Elementos de formulario y contenido -->
+</form>
+
+method="get":
+Función: Este método envía los datos del formulario como parte de la URL (consulta) en la solicitud HTTP. Los datos son visibles en la barra de direcciones del navegador y pueden ser marcados como favoritos o compartidos. Es adecuado para formularios que realizan búsquedas o consultas y no transmiten datos confidenciales o privados. Es el valor predeterminado si no se especifica un método.
+
+method="post":
+Función: Este método envía los datos del formulario en el cuerpo de la solicitud HTTP. Los datos no son visibles en la URL y, por lo tanto, son más seguros para transmitir información sensible. Se utiliza para formularios que envían datos confidenciales o grandes cantidades de información.
+
+
+</section>
+
+<section><!--NAME-->
+name: Todos los componentes de un formulario deben tener un nombre, que se indica con el atributo “name”. Con ese nombre después se accede a su valor en el archivo indicado en el action. Un input sin name no se envía., SINTAXIS:
+<input type="tipo_de_campo" name="nombre_del_campo">
+
+El atributo "name" se utiliza para identificar y etiquetar el campo de entrada en el formulario. Cuando el formulario se envía al servidor, los datos del campo se envían junto con su nombre como una pareja clave-valor, lo que permite al servidor identificar y procesar los datos correctamente.
+
+</section>
+
+<section><!--ENCTYPE-->
+Enctype: se utiliza en el elemento <form> en HTML para especificar la codificación de caracteres utilizada al enviar los datos del formulario al servidor, sintaxis:
+<form action="URL_del_script_de_procesamiento" method="método_de_envío" enctype="tipo_de_codificación">
+  <!-- Elementos de formulario y contenido -->
+</form>
+
+enctype="application/x-www-form-urlencoded":
+Función: Este es el valor predeterminado. Codifica los datos del formulario en un formato que se envía a través de la solicitud HTTP y es adecuado para datos de formulario estándar, como campos de texto, casillas de verificación y botones de radio. Los datos se envían en formato de consulta y son visibles en la URL.
+
+enctype="multipart/form-data":
+Función: Se utiliza para enviar datos de archivo, como imágenes o documentos. Este tipo de codificación es necesario cuando se utilizan campos de carga de archivos en el formulario. Los datos se dividen en partes separadas y se envían al servidor.
+
+enctype="text/plain":
+Función: Codifica los datos del formulario en texto sin formato. Esto es útil cuando deseas datos de formulario legibles por humanos para pruebas o depuración.
+</section>
+
+<section> <!--TYPE-->
+type : El atributo "type" se utiliza en los elementos de formulario, como <input>, para especificar el tipo de campo de entrada que se desea crear. SINTAXIS:
+<input type="tipo_de_campo" name="nombre_del_campo" value="valor_inicial">
+
+type="text":
+Función: Crea un campo de entrada de texto de una sola línea, que permite a los usuarios ingresar texto libremente.
+
+type="password":
+Función: Crea un campo de entrada de contraseña. Los caracteres se muestran como asteriscos o puntos para ocultar la contraseña.
+
+type="checkbox":
+Función: Crea una casilla de verificación que permite a los usuarios seleccionar una o varias opciones.
+
+type="radio":
+Función: Crea un botón de radio que permite a los usuarios seleccionar una opción de un conjunto de opciones mutuamente excluyentes.
+
+type="submit":
+Función: Crea un botón de envío que, cuando se hace clic, envía los datos del formulario al servidor para su procesamiento.
+
+type="reset":
+Función: Crea un botón de restablecimiento que, cuando se hace clic, restaura los valores del formulario a sus valores iniciales.
+
+type="file":
+Función: Crea un campo de carga de archivo que permite a los usuarios seleccionar y cargar archivos desde sus dispositivos.
+
+type="email":
+Función: Crea un campo de entrada de correo electrónico y valida que la entrada cumpla con el formato de una dirección de correo electrónico.
+
+type="number":
+Función: Crea un campo de entrada numérica y permite a los usuarios ingresar solo números. Puede incluir controles para aumentar y disminuir el valor numérico.
+
+type="color":
+Función: Crea un campo de entrada de color que permite a los usuarios seleccionar un color a partir de un selector de colores.
+
+type="week":
+Función: Crea un campo de entrada de semana que permite a los usuarios seleccionar una semana y un año.
+
+type="month":
+Función: Crea un campo de entrada de mes que permite a los usuarios seleccionar un mes y un año.
+
+type="datetime":
+Función: Crea un campo de entrada de fecha y hora que permite a los usuarios seleccionar una fecha y hora.
+
+type="time":
+Función: Crea un campo de entrada de tiempo que permite a los usuarios seleccionar una hora.
+
+type="date":
+Función: Crea un campo de entrada de fecha que permite a los usuarios seleccionar una fecha de un calendario emergente.
+
+type="datatime-local":
+funcion: input para introducir fecha y hora sin zona horaria especifica
+
+type="range":
+Función: Crea un control deslizante que permite a los usuarios seleccionar un valor en un rango numérico específico.
+
+type="tel":
+Función: Crea un campo de entrada de número de teléfono y generalmente se utiliza para capturar números de teléfono.
+
+type="search":
+Función: Crea un campo de entrada de búsqueda que puede mostrar un icono de búsqueda y proporcionar una experiencia de búsqueda mejorada en algunos navegadores.
+
+type="button":
+funcion: input de tipo boton sin un comportamiento especifico, esta pensado para usarse luego con scripts de lenguajes como javascript
+
+type="url":
+funcion: input para escribir una url. el valor introducido se valida para que contenga uan cadena vacia o una ruta url absoluta antes de enviarse. los saltos de linea y espacios en blanco al principio o al final del valor son eliminados automaticamente
+
+type="image":
+funcion: boton de envio de formulario con grafico/image. su funcionamiento es muy similiar al input de tipo file
+
+type="hidden":
+funcion: input que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.
+
+</section>
+
+<section> <!--TARGET-->
+target: Indica dónde se abrirá la respuesta del servidor después de enviar el formulario. Puede ser "_self" (en la misma ventana), "_blank" (en una nueva ventana o pestaña), o el nombre de un marco o iframe, sintaxis:
+<form action="URL_del_script_de_procesamiento" method="método_de_envío" target="_self|_blank|nombre_del_marco">
+  <!-- Elementos de formulario y contenido -->
+</form>
+
+target="_self":
+Función: Indica que la respuesta del servidor se abrirá en la misma ventana o pestaña en la que se encuentra el formulario. Es la opción predeterminada si no se especifica un valor para target.
+
+target="_blank":
+Función: Indica que la respuesta del servidor se abrirá en una nueva ventana o pestaña del navegador. Esto puede ser útil para evitar que el usuario salga de la página actual o para abrir contenido adicional en una nueva ventana.
+
+target="nombre_del_marco":
+Función: Si estás utilizando marcos en tu página web, puedes especificar el nombre de un marco en el que se abrirá la respuesta del servidor. Esto permite dirigir la respuesta a un marco específico en una página con varios marcos.
+</section>
+
+<section><!--AUTOCOMPLETE-->
+autocomplete: Permite habilitar o deshabilitar la función de autocompletado que el navegador ofrece con sugerencias de autocompletado para los campos de un formulario. sintaxis :
+<form action="URL_del_script_de_procesamiento" method="método_de_envío" autocomplete="on|off">
+  <!-- Elementos de formulario y contenido -->
+</form>
+autocomplete="on": Esto habilita el autocompletado en los campos del formulario. Cuando un usuario comienza a escribir en un campo, el navegador ofrece sugerencias basadas en entradas anteriores del usuario.
+
+autocomplete="off": Esto deshabilita el autocompletado en los campos del formulario. El navegador no ofrecerá sugerencias basadas en entradas anteriores del usuario.
+
+La función principal del atributo autocomplete es proporcionar control sobre la función de autocompletado del navegador. Puedes usarlo para mejorar la privacidad o la seguridad de los datos ingresados en un formulario, especialmente en campos donde el autocompletado no es deseado o puede ser un problema, como contraseñas o datos personales.
+</section>
+
+<section><!--NOVALIDATE-->
+novalidate: se agrega directamente al elemento <form> en HTML para evitar la validación de los datos del formulario en el lado del cliente antes de enviarlos, SINTAXIS: 
+  <form action="URL_del_script_de_procesamiento" method="método_de_envío" novalidate>
+  <!-- Elementos de formulario y contenido -->
+</form>
+El atributo novalidate se agrega como un atributo independiente dentro del elemento <form>. Su simple presencia en el elemento <form> indica que la validación del lado del cliente se debe evitar. Esto significa que el navegador no realizará comprobaciones automáticas de campos requeridos, tipos de datos, etc., antes de enviar los datos al servidor.
+
+Cuando se utiliza novalidate, la validación de datos debe realizarse en el servidor (en el script especificado en el atributo "action") para garantizar la integridad y la precisión de los datos ingresados en el formulario. Esto es especialmente útil en situaciones donde la validación en el lado del servidor es más segura o necesaria, por ejemplo, cuando se están recopilando datos críticos o confidenciales.
+</section>
+
+<section><!--ACTION-->
+ Especifica la URL a la que se enviarán los datos del formulario para su procesamiento en el servidor.debe estar escrito en un lenguaje de los llamados “del lado del servidor” (PHP / ASP / JS). Si no se indica un valor, por defecto el Action es el mismo archivo donde está el formulario. sintaxis:
+
+<form action="datos.js" method="get" enctype="multipart/form-data"> <!--componentes del formulario--> </form>
+
+La elección de la URL adecuada dependerá de dónde se encuentra el script de procesamiento y de tus necesidades específicas.
+
+Sintaxis: action="/ruta_del_script"
+Función: Indica que el script de procesamiento se encuentra en la misma raíz del dominio del sitio web. La ruta debe comenzar con "/" y puede especificar una ubicación relativa.
+Especificar una URL completa (incluyendo el dominio):
+
+Sintaxis: action="https://www.ejemplo.com/ruta_del_script"
+Función: Especifica la ubicación exacta del script de procesamiento, incluyendo el dominio. Esto es útil cuando el script se encuentra en un servidor externo.
+Especificar un script en el mismo directorio:
+
+Sintaxis: action="nombre_del_script.html"
+Función: Indica que el script de procesamiento se encuentra en el mismo directorio que la página actual. El navegador buscará el script en el mismo directorio.
+Enviar a un script en el servidor que procesa los datos:
+
+Sintaxis: action="procesar.php"
+Función: Especifica un script en el lado del servidor (por ejemplo, un script PHP) que procesará los datos del formulario. La URL apunta al script que se ejecutará cuando el formulario se envíe.
+Enviar a un servicio de procesamiento externo:
+
+Sintaxis: action="https://api.ejemplo.com/procesar"
+Función: En el caso de servicios de terceros que procesan datos del formulario, puedes especificar la URL del servicio externo que se encargará del procesamiento.
+</section>
+
+Definición de grupos de radio o checkbox
+<select> <!--Definición de grupos de radio o checkbox-->
+Un grupo de opción de radio o checkbox se define dando a cada uno de los botones de opción del grupo el mismo valor al atributo name. Una vez que se establece un grupo de radio, al seleccionar cualquier botón de radio en ese grupo automáticamente se deselecciona cualquier botón de radio seleccionado actualmente en el mismo grupo. En el caso de los grupos de checkbox no sucede lo mismo, ya que este tipo de input nos permite la selección de múltiples valores.
+
+Además, cada uno de los elementos de radio o checkbox, debe poseer un valor único que lo identifique de manera única dentro del grupo, utilizando el atributo id. Esta identificación única, será utilizada luego por el atributo for del elemento <label> para asociar las etiquetas con los botones de opción y generar un formulario accesible.
+
+sintaxis: radio
+<div>
+  <label for="grupo">grupo de opciones</label>
+
+  <input type="radio" name="grupo" id="opcion1" value="op1"/>
+  <label for="opcion1">opcion 1</label>
+
+  <input type="radio" name="grupo" id="opcion2" value="op2"/>
+  <label for="opcion2">opcion 2</label>
+</div>
+
+sintaxis: checkbox
+<div>
+<label for="grupo">grupo de opciones</label>
+
+<input type="checkbox" name="grupo" id="opcion1" value="op1"/>
+<label for="opcion1">opcion 1</label>
+
+<input type="checkbox" name="grupo" id="opcion2" value="op2"/>
+<label for="opcion2">opcion 2</label>
+</div>
+
+</select>
+</pre>
