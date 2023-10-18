@@ -1,0 +1,66 @@
+.inicio-img {
+  background-image: url("https://fotos.perfil.com/2021/10/04/1004ansenuza2-1239496.jpg");
+  background-size: cover; /* Ajusta la imagen para que cubra todo el viewport */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-position: top;
+}
+
+h1 {
+  color: red;
+}
+.main-content {
+  margin-top: 4em; /* Agrega un margen superior igual a la altura de la barra de navegación */
+}
+.navPrincipal {
+  background-color: rgb(76, 89, 138);
+  padding: 1em 0;
+
+  width: 100%;
+  top: 0;
+}
+.navPrincipal ul {
+  list-style: none; /* Quita las viñetas de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+.navPrincipal ul li {
+  display: inline-block; /* Los elementos de la lista se muestran en línea */
+
+  margin-right: 2em; /* Espacio entre elementos de la lista */
+}
+
+.navPrincipal ul li a {
+  text-decoration: none; /* Quita la subrayado predeterminado de los enlaces */
+  color: #110505; /* Color del texto del enlace */
+  font-weight: bold; /* Texto en negrita */
+  padding: 5px 10px; /* Espacio alrededor del texto del enlace */
+  border: 1px solid #fff; /* Borde alrededor del enlace */
+  border-radius: 5px; /* Esquinas redondeadas */
+  transition: background-color 0.3s, color 0.3s; /* Efecto de transición al pasar el ratón */
+}
+
+.navPrincipal ul li a:hover {
+  background-color: #fff; /* Color de fondo al pasar el ratón */
+  color: #333; /* Cambio de color de texto al pasar el ratón */
+}
+
+.txt-conoce {
+  box-shadow: 2px 2px 15px 0px rgb(37, 5, 5);
+  display: inline-block;
+  border: 1px solid;
+  border-color: black;
+  border-radius: 5px;
+  font-size: 10px;
+  margin: 3em;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 25px;
+}
+.txt-conoce:hover {
+  box-shadow: 5px 5px 25px 0px rgb(37, 5, 5);
+  background-color: white;
+  color: black;
+}
