@@ -3,6 +3,11 @@ h1 {
   color: #333;
   text-align: center;
 }
+table,
+th,
+td {
+  border: 1px solid #141313; /* Agrega un borde a las celdas y la tabla si lo deseas */
+}
 .inicio-img {
   background-image: url("https://fotos.perfil.com/2021/10/04/1004ansenuza2-1239496.jpg");
   background-size: cover; /* Ajusta la imagen para que cubra todo el viewport */
@@ -11,7 +16,7 @@ h1 {
 }
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: rgb(173, 216, 230);
 }
 
 .Bienvenida {
@@ -25,9 +30,7 @@ body {
   margin: 20px 0;
   padding: 2em;
 }
-.main-accommodation {
-  background-color: rgb(173, 216, 230);
-}
+
 .navSecundaria {
   list-style-type: none;
   font-weight: bold;
@@ -54,7 +57,10 @@ body {
   background-color: #fff; /* Color de fondo al pasar el ratón */
   color: #333; /* Cambio de color de texto al pasar el ratón */
 }
-
+.main-cont-entr {
+  display: flex;
+  justify-content: center;
+}
 .main-about {
   margin-top: 0; /* Agrega un margen superior igual a la altura de la barra de navegación */
   background-image: url("https://c.wallhere.com/photos/0c/40/1920x1080_px_animals_beach_birds_flamingos_sea_waves-728587.jpg!d");
@@ -87,7 +93,16 @@ body {
   border-color: rgba(236, 231, 231, 0.137);
   border-radius: 0.5em;
   box-shadow: 2px 2px 15px 3px rgb(37, 5, 5);
+  padding: 2px;
 }
+.main-entr {
+  padding: 1em;
+}
+.main-entr section {
+  max-width: 30%;
+  max-height: 100%;
+}
+
 .navPrincipal {
   list-style-type: none;
   font-weight: bold;
@@ -163,16 +178,10 @@ body {
   color: black;
   font-size: 1em; /* Tamaño de fuente en el hover igual que en el estado normal */
 }
-table,
-th,
-td {
-  border: 1px solid #141313; /* Agrega un borde a las celdas y la tabla si lo deseas */
-}
 
 .td-img {
   max-width: 70vw;
   height: 40vh;
-
   position: relative;
 }
 
@@ -182,11 +191,26 @@ td {
   transition: transform 0.2s;
   z-index: 10;
 }
-
 .td-img img:hover {
   transform: scale(1.05); /* Aumenta el tamaño de la imagen en un 20% */
   z-index: 200;
 }
+.td-img-simple {
+  max-width: 70vw;
+  height: 40vh;
+  position: relative;
+}
+.td-img-simple img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s;
+  z-index: 10;
+}
+.td-img-simple img:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la imagen en un 20% */
+  z-index: 200;
+}
+
 .td-iframe {
   position: relative;
   max-width: 100%; /* Establece un ancho máximo para el contenedor */
