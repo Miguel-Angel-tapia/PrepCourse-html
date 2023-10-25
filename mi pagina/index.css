@@ -102,16 +102,16 @@ body {
   max-width: 30%;
   max-height: 100%;
 }
-
 .navPrincipal {
   list-style-type: none;
   font-weight: bold;
   text-align: center;
   background-color: rgb(44, 61, 123);
   padding: 1em;
-  width: 100%;
+  max-width: 100vw;
   top: 0;
 }
+
 .navPrincipal ul {
   padding: 0;
   margin: 0;
@@ -133,8 +133,8 @@ body {
 }
 
 .navPrincipal ul li a:hover {
-  background-color: #fff; /* Color de fondo al pasar el ratón */
-  color: #333; /* Cambio de color de texto al pasar el ratón */
+  background-color: #fff;
+  color: #333;
 }
 
 .txt-conoce {
