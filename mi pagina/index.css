@@ -6,7 +6,7 @@ h1 {
 table,
 th,
 td {
-  border: 1px solid #141313; /* Agrega un borde a las celdas y la tabla si lo deseas */
+  border: 1px solid #141313;
 }
 .inicio-img {
   background-image: url("https://fotos.perfil.com/2021/10/04/1004ansenuza2-1239496.jpg");
@@ -18,7 +18,62 @@ body {
   font-family: Arial, sans-serif;
   background-color: rgb(173, 216, 230);
 }
+form {
+  max-width: 30em;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.sect-entr a img {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: auto;
+  object-fit: fill;
+}
+.sect-entr a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Añade esto para centrar horizontalmente */
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+}
+.sect-entr a:hover {
+  transform: scale(1.05);
+  z-index: 200;
+}
 .Bienvenida {
   display: inline-block;
   color: rgb(19, 3, 3);
@@ -30,7 +85,6 @@ body {
   margin: 20px 0;
   padding: 2em;
 }
-
 .navSecundaria {
   list-style-type: none;
   font-weight: bold;
@@ -67,13 +121,18 @@ body {
   background-size: cover;
   padding: 1em;
 }
+.main-about section p {
+  text-shadow: 2px 2px 4px rgba(238, 238, 238, 0.71);
+  margin-top: 1em;
+  font-weight: 600;
+  display: inline-block;
+}
 .main-visits ol li {
   list-style-type: none;
   font-weight: bold;
   text-align: center;
   padding-bottom: 0.7em;
 }
-
 .main-visits {
   background-image: url("https://escrituracronica.com/wp-content/uploads/2022/07/Atardecer-en-Miramar-de-Ansenuza-Ph-Hugo-Giraudo-2.jpeg");
   background-size: cover;
@@ -83,8 +142,11 @@ body {
   font-size: 1.3em;
 }
 .main-visits a {
-  color: #64645e; /* Cambiar el color de los enlaces según tu preferencia */
+  color: #000000; /* Cambiar el color de los enlaces según tu preferencia */
   text-decoration: none;
+  background: linear-gradient(to bottom, #ffffffac, transparent);
+  border-radius: 0.5em;
+  padding: 2px;
 }
 .main-visits a:hover {
   color: rgb(1, 0, 10);
@@ -95,13 +157,6 @@ body {
   box-shadow: 2px 2px 15px 3px rgb(37, 5, 5);
   padding: 2px;
 }
-.main-entr {
-  padding: 1em;
-}
-.main-entr section {
-  max-width: 30%;
-  max-height: 100%;
-}
 .navPrincipal {
   list-style-type: none;
   font-weight: bold;
@@ -111,17 +166,14 @@ body {
   max-width: 100vw;
   top: 0;
 }
-
 .navPrincipal ul {
   padding: 0;
   margin: 0;
 }
-
 .navPrincipal ul li {
   display: inline-block; /* Los elementos de la lista se muestran en línea */
   margin-right: 2em; /* Espacio entre elementos de la lista */
 }
-
 .navPrincipal ul li a {
   text-decoration: none; /* Quita la subrayado predeterminado de los enlaces */
   color: #110505; /* Color del texto del enlace */
@@ -131,12 +183,10 @@ body {
   border-radius: 5px; /* Esquinas redondeadas */
   transition: background-color 0.3s, color 0.3s; /* Efecto de transición al pasar el ratón */
 }
-
 .navPrincipal ul li a:hover {
   background-color: #fff;
   color: #333;
 }
-
 .txt-conoce {
   box-shadow: 2px 2px 15px 3px rgb(37, 5, 5);
   display: inline-block;
@@ -171,20 +221,17 @@ body {
   display: inline-block; /* Cambiar a display inline-block para que el ancho sea el contenido */
   border: none; /* Eliminar el borde */
 }
-
 .volv:hover {
   box-shadow: 5px 5px 25px 3px rgb(37, 5, 5);
   background-color: white;
   color: black;
   font-size: 1em; /* Tamaño de fuente en el hover igual que en el estado normal */
 }
-
 .td-img {
   max-width: 70vw;
   height: 40vh;
   position: relative;
 }
-
 .td-img img {
   width: 50%;
   height: 100%;
@@ -210,14 +257,12 @@ body {
   transform: scale(1.05); /* Aumenta el tamaño de la imagen en un 20% */
   z-index: 200;
 }
-
 .td-iframe {
   position: relative;
   max-width: 100%; /* Establece un ancho máximo para el contenedor */
   max-height: 100%;
   overflow: hidden; /* Oculta cualquier contenido que se desborde */
 }
-
 .td-iframe iframe {
   width: 100%; /* Ajusta el ancho al 100% del contenedor */
   height: 15.5em; /* Ajusta la altura al 100% del contenedor */
@@ -226,7 +271,6 @@ body {
 caption {
   font-size: 1.7em;
 }
-
 .link {
   position: static;
   display: block;
