@@ -3,17 +3,13 @@ h1 {
   color: #333;
   text-align: center;
 }
+
 table,
 th,
 td {
-  border: 1px solid #141313;
+  border: 1px dashed #141313;
 }
-.inicio-img {
-  background-image: url("https://fotos.perfil.com/2021/10/04/1004ansenuza2-1239496.jpg");
-  background-size: cover; /* Ajusta la imagen para que cubra todo el viewport */
-  background-repeat: no-repeat; /* Evita la repetición de la imagen */
-  background-position: top;
-}
+
 body {
   font-family: Arial, sans-serif;
   background-color: rgb(173, 216, 230);
@@ -26,7 +22,6 @@ form {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -36,7 +31,6 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 input[type="submit"] {
   background-color: #007bff;
   color: #fff;
@@ -44,7 +38,6 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
 }
-
 input[type="submit"]:hover {
   background-color: #0056b3;
 }
@@ -65,7 +58,7 @@ label {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  justify-content: center; /* Añade esto para centrar horizontalmente */
+  justify-content: center;
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
   object-fit: cover;
@@ -73,6 +66,12 @@ label {
 .sect-entr a:hover {
   transform: scale(1.05);
   z-index: 200;
+}
+.inicio-img {
+  background-image: url("https://fotos.perfil.com/2021/10/04/1004ansenuza2-1239496.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 .Bienvenida {
   display: inline-block;
@@ -89,34 +88,34 @@ label {
   list-style-type: none;
   font-weight: bold;
   text-align: center;
-  position: sticky; /* Hace que la barra de navegación esté fija */
-  top: 0; /* Fija la barra en la parte superior */
-  width: 100%; /* Ocupa todo el ancho de la ventana */
+  position: sticky;
+  top: 0;
+  width: 100%;
   background-color: rgb(44, 61, 123);
-  padding: 5px; /* Espacio alrededor del contenido */
-  z-index: 500; /* Asegura que esté por encima de otros elementos */
+  padding: 5px;
+  z-index: 500;
 }
 .navSecundaria a {
-  display: inline-block; /* Los elementos de la lista se muestran en línea */
-  margin-right: 2em; /* Espacio entre elementos de la lista */
-  text-decoration: none; /* Quita la subrayado predeterminado de los enlaces */
-  color: #110505; /* Color del texto del enlace */
-  font-weight: bold; /* Texto en negrita */
-  padding: 5px 10px; /* Espacio alrededor del texto del enlace */
-  border: 1px solid #fff; /* Borde alrededor del enlace */
-  border-radius: 5px; /* Esquinas redondeadas */
-  transition: background-color 0.3s, color 0.3s; /* Efecto de transición al pasar el ratón */
+  display: inline-block;
+  margin-right: 2em;
+  text-decoration: none;
+  color: #110505;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 .navSecundaria a:hover {
-  background-color: #fff; /* Color de fondo al pasar el ratón */
-  color: #333; /* Cambio de color de texto al pasar el ratón */
+  background-color: #fff;
+  color: #333;
 }
 .main-cont-entr {
   display: flex;
   justify-content: center;
 }
 .main-about {
-  margin-top: 0; /* Agrega un margen superior igual a la altura de la barra de navegación */
+  margin-top: 0;
   background-image: url("https://c.wallhere.com/photos/0c/40/1920x1080_px_animals_beach_birds_flamingos_sea_waves-728587.jpg!d");
   background-size: cover;
   padding: 1em;
@@ -142,7 +141,7 @@ label {
   font-size: 1.3em;
 }
 .main-visits a {
-  color: #000000; /* Cambiar el color de los enlaces según tu preferencia */
+  color: #000000;
   text-decoration: none;
   background: linear-gradient(to bottom, #ffffffac, transparent);
   border-radius: 0.5em;
@@ -171,17 +170,17 @@ label {
   margin: 0;
 }
 .navPrincipal ul li {
-  display: inline-block; /* Los elementos de la lista se muestran en línea */
-  margin-right: 2em; /* Espacio entre elementos de la lista */
+  display: inline-block;
+  margin-right: 2em;
 }
 .navPrincipal ul li a {
-  text-decoration: none; /* Quita la subrayado predeterminado de los enlaces */
-  color: #110505; /* Color del texto del enlace */
-  font-weight: bold; /* Texto en negrita */
-  padding: 5px 10px; /* Espacio alrededor del texto del enlace */
-  border: 1px solid #fff; /* Borde alrededor del enlace */
-  border-radius: 5px; /* Esquinas redondeadas */
-  transition: background-color 0.3s, color 0.3s; /* Efecto de transición al pasar el ratón */
+  text-decoration: none;
+  color: #110505;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 .navPrincipal ul li a:hover {
   background-color: #fff;
@@ -211,21 +210,21 @@ label {
 .volv {
   list-style-type: none;
   text-align: center;
-  font-size: 1em; /* Tamaño de fuente más pequeño */
-  margin: 2em 2em; /* Margen superior e inferior de 2em y centrado horizontal */
+  font-size: 1em;
+  margin: 2em 2em;
   color: white;
   background-color: rgb(44, 61, 123);
   text-decoration: none;
   font-weight: bold;
-  padding: 0.5em 1em; /* Ajustar el padding para hacerlo más pequeño */
-  display: inline-block; /* Cambiar a display inline-block para que el ancho sea el contenido */
-  border: none; /* Eliminar el borde */
+  padding: 0.5em 1em;
+  display: inline-block;
+  border: none;
 }
 .volv:hover {
   box-shadow: 5px 5px 25px 3px rgb(37, 5, 5);
   background-color: white;
   color: black;
-  font-size: 1em; /* Tamaño de fuente en el hover igual que en el estado normal */
+  font-size: 1em;
 }
 .td-img {
   max-width: 70vw;
@@ -239,7 +238,7 @@ label {
   z-index: 10;
 }
 .td-img img:hover {
-  transform: scale(1.05); /* Aumenta el tamaño de la imagen en un 20% */
+  transform: scale(1.05);
   z-index: 200;
 }
 .td-img-simple {
@@ -254,19 +253,19 @@ label {
   z-index: 10;
 }
 .td-img-simple img:hover {
-  transform: scale(1.05); /* Aumenta el tamaño de la imagen en un 20% */
+  transform: scale(1.05);
   z-index: 200;
 }
 .td-iframe {
   position: relative;
-  max-width: 100%; /* Establece un ancho máximo para el contenedor */
+  max-width: 100%;
   max-height: 100%;
-  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+  overflow: hidden;
 }
 .td-iframe iframe {
-  width: 100%; /* Ajusta el ancho al 100% del contenedor */
-  height: 15.5em; /* Ajusta la altura al 100% del contenedor */
-  border: 0; /* Quita el borde del iframe si es necesario */
+  width: 100%;
+  height: 15.5em;
+  border: 0;
 }
 caption {
   font-size: 1.7em;
@@ -276,13 +275,13 @@ caption {
   display: block;
   font-size: 1em;
   text-align: center;
-  text-decoration: none; /* Quita la subrayado predeterminado de los enlaces */
-  color: #110505; /* Color del texto del enlace */
-  font-weight: bold; /* Texto en negrita */
-  padding: 6.6em 1em; /* Espacio alrededor del texto del enlace */
+  text-decoration: none;
+  color: #110505;
+  font-weight: bold;
+  padding: 6.6em 1em;
   transition: background-color 0.3s, color 0.3s;
 }
 .link:hover {
-  background-color: #fff; /* Color de fondo al pasar el ratón */
-  color: #333; /* Cambio de color de texto al pasar el ratón */
+  background-color: #fff;
+  color: #333;
 }
